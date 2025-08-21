@@ -1,7 +1,4 @@
-# Build a bilingual (TR/EN) mobile-friendly index.html with a language toggle.
-from pathlib import Path
-
-html = r"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
@@ -261,8 +258,3 @@ html = r"""<!DOCTYPE html>
   </script>
 </body>
 </html>
-"""
-
-out = Path("/mnt/data/index.html")
-out.write_text(html, encoding="utf-8")
-out
