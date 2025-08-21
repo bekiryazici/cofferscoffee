@@ -22,15 +22,22 @@
     .lang-switch button.active{background:var(--accent); color:#111;}
     .section{background:var(--card); border-radius:14px; padding:14px; margin:12px 0 16px; border:1px solid var(--divider);}
     .section h2{font-size:18px; margin:0 0 10px; border-bottom:1px dashed var(--divider); padding-bottom:8px;}
-    .item{display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:8px 0;}
+    .item{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:8px 0;}
     .item + .item{border-top:1px dashed var(--divider);}
     .name{font-weight:700;}
     .desc{color:var(--muted); font-size:.92rem;}
     .price, .sizes span{font-weight:700; color:var(--accent); white-space:nowrap;}
-    .sizes{display:flex; gap:10px;}
+    .sizes{display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end; max-width:60%;}
     .foot{color:var(--muted); font-size:.9rem; text-align:center; margin-top:10px;}
     [data-lang]{display:none;}
     [data-lang].show{display:block;}
+
+    /* Mobile fixes: stack name + prices and let prices wrap cleanly */
+    @media (max-width: 480px){
+      .item{flex-direction:column; align-items:flex-start;}
+      .sizes{justify-content:flex-start; max-width:100%;}
+      .price, .sizes span{font-size:1rem;}
+    }
   </style>
 </head>
 <body>
@@ -48,16 +55,16 @@
 
       <div class="section">
         <h2>☕ Espresso Bazlı İçecekler</h2>
-        <div class="item"><div class="name">Americano 14oz</div><div class="price">₺280.00</div></div>
+        <div class="item"><div class="name">Americano 14oz</div><div class="price">₺140.00</div></div>
         <div class="item"><div class="name">Americano 8oz</div><div class="price">₺115.00</div></div>
         <div class="item"><div class="name">Caffè Latte 14oz</div><div class="price">₺165.00</div></div>
         <div class="item"><div class="name">Caffè Latte 8oz</div><div class="price">₺125.00</div></div>
         <div class="item"><div class="name">Caffè Mocha 8oz</div><div class="price">₺170.00</div></div>
-        <div class="item"><div class="name">Kapuçino 14oz</div><div class="price">₺165.00</div></div>
-        <div class="item"><div class="name">Kapuçino 8oz</div><div class="price">₺125.00</div></div>
+        <div class="item"><div class="name">Cappuccino 14oz</div><div class="price">₺165.00</div></div>
+        <div class="item"><div class="name">Cappuccino 8oz</div><div class="price">₺125.00</div></div>
         <div class="item"><div class="name">Karamel Latte 14oz</div><div class="price">₺175.00</div></div>
         <div class="item"><div class="name">Karamel Latte 8oz</div><div class="price">₺155.00</div></div>
-        <div class="item"><div class="name">Kortado</div><div class="price">₺140.00</div></div>
+        <div class="item"><div class="name">Cortado</div><div class="price">₺140.00</div></div>
         <div class="item"><div class="name">Çift Espresso</div><div class="price">₺120.00</div></div>
         <div class="item"><div class="name">Çift Espresso Macchiato</div><div class="price">₺135.00</div></div>
         <div class="item"><div class="name">Tek Espresso</div><div class="price">₺85.00</div></div>
@@ -138,7 +145,7 @@
 
       <div class="section">
         <h2>☕ Espresso Beverages</h2>
-        <div class="item"><div class="name">Americano 14oz</div><div class="price">₺280.00</div></div>
+        <div class="item"><div class="name">Americano 14oz</div><div class="price">₺140.00</div></div>
         <div class="item"><div class="name">Americano 8oz</div><div class="price">₺115.00</div></div>
         <div class="item"><div class="name">Caffè Latte 14oz</div><div class="price">₺165.00</div></div>
         <div class="item"><div class="name">Caffè Latte 8oz</div><div class="price">₺125.00</div></div>
@@ -242,14 +249,12 @@
         enBtn.classList.add('active'); trBtn.classList.remove('active');
         document.documentElement.setAttribute('lang','en');
       }
-      // persist choice
       try{ localStorage.setItem('menuLang', lang); }catch(e){}
     }
 
     trBtn.addEventListener('click', ()=>show('tr'));
     enBtn.addEventListener('click', ()=>show('en'));
 
-    // load saved
     try{
       const saved = localStorage.getItem('menuLang');
       if(saved==='en') show('en');
