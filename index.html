@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COFFERS COFFEE | Menü</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --card: #171718;
+      --text: #ededed;
+      --muted: #a9a9a9;
+      --accent: #B56A5F;
+      --divider: #2a2b2d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 18px 14px 40px; }
+    .title { text-align:center; margin: 6px 0 14px; }
+    .title h1 { font-size: 28px; letter-spacing: .12em; margin: 0; }
+    .title p { color: var(--muted); margin:6px 0 0; }
+    .section { background: var(--card); border-radius: 14px; padding: 14px; margin: 14px 0 18px; border: 1px solid var(--divider);}
+    .section h2 { font-size: 18px; margin: 4px 0 10px; color: var(--text); border-bottom: 1px dashed var(--divider); padding-bottom: 8px; }
+    .item { display:flex; align-items:baseline; justify-content:space-between; padding:8px 0; gap:12px; }
+    .item + .item { border-top: 1px dashed var(--divider); }
+    .name { font-weight: 700; }
+    .desc { color: var(--muted); font-size:.92rem; }
+    .price, .sizes span { font-weight:700; color: var(--accent); white-space:nowrap; }
+    .sizes { display:flex; gap:10px; }
+    .foot { color: var(--muted); font-size:.9rem; text-align:center; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="title">
+      <h1>COFFERS COFFEE MENÜ</h1>
+      <p>Craft coffee & good vibes</p>
+    </div>
+
+    <!-- Espresso Bazlı Sıcaklar -->
+    <section class="section">
+      <h2>☕ Espresso İçecekleri (8oz / 14oz)</h2>
+      <div class="item"><div><div class="name">Caffè Latte</div></div><div class="sizes"><span>125₺</span><span>165₺</span></div></div>
+      <div class="item"><div><div class="name">Cappuccino</div></div><div class="sizes"><span>125₺</span><span>165₺</span></div></div>
+      <div class="item"><div><div class="name">Caffè Mocha</div></div><div class="sizes"><span>170₺</span><span>210₺</span></div></div>
+      <div class="item"><div><div class="name">White Mocha</div></div><div class="sizes"><span>170₺</span><span>210₺</span></div></div>
+      <div class="item"><div><div class="name">Americano</div></div><div class="sizes"><span>115₺</span><span>140₺</span></div></div>
+      <div class="item"><div><div class="name">Caramel Latte</div></div><div class="sizes"><span>155₺</span><span>175₺</span></div></div>
+      <div class="item"><div><div class="name">Vanilla Latte</div></div><div class="sizes"><span>155₺</span><span>175₺</span></div></div>
+      <div class="item"><div><div class="name">Flat White</div></div><div class="sizes"><span>130₺</span><span>170₺</span></div></div>
+      <div class="item"><div><div class="name">Cortado</div></div><div class="price">140₺</div></div>
+
+      <div class="item"><div><div class="name">Espresso</div></div><div class="sizes"><span>85₺</span><span>120₺</span></div></div>
+      <div class="item"><div><div class="name">Espresso Macchiato</div></div><div class="sizes"><span>120₺</span><span>135₺</span></div></div>
+      <div class="item"><div><div class="name">Türk Kahvesi</div></div><div class="price">110₺</div></div>
+      <div class="item"><div><div class="name">Filter Coffee</div><div class="desc">8oz / 12oz</div></div><div class="sizes"><span>115₺</span><span>140₺</span></div></div>
+    </section>
+
+    <!-- Demleme Yöntemleri -->
+    <section class="section">
+      <h2>🫖 Demleme Yöntemleri</h2>
+      <div class="item"><div><div class="name">V60</div><div class="desc">for 1 / for 2</div></div><div class="sizes"><span>220₺</span><span>350₺</span></div></div>
+      <div class="item"><div><div class="name">Chemex</div></div><div class="price">390₺</div></div>
+      <div class="item"><div><div class="name">Japanese Iced</div><div class="desc">for 1</div></div><div class="price">300₺</div></div>
+      <div class="item"><div><div class="name">Japanese Syphon</div><div class="desc">for 1 / for 2</div></div><div class="sizes"><span>300₺</span><span>330₺</span></div></div>
+    </section>
+
+    <!-- Soğuk Kahveler -->
+    <section class="section">
+      <h2>🧊 Iced Coffee</h2>
+      <div class="item"><div><div class="name">Ice Latte</div></div><div class="price">170₺</div></div>
+      <div class="item"><div><div class="name">Ice Americano</div></div><div class="price">150₺</div></div>
+      <div class="item"><div><div class="name">Ice Filter</div></div><div class="price">150₺</div></div>
+      <div class="item"><div><div class="name">Ice Mocha</div></div><div class="price">220₺</div></div>
+      <div class="item"><div><div class="name">Ice White Mocha</div></div><div class="price">220₺</div></div>
+      <div class="item"><div><div class="name">Ice Caramel Latte</div></div><div class="price">180₺</div></div>
+      <div class="item"><div><div class="name">Ice Vanilla Latte</div></div><div class="price">190₺</div></div>
+      <div class="item"><div><div class="name">Classic Frappe</div></div><div class="price">190₺</div></div>
+      <div class="item"><div><div class="name">Nutella Frappe</div></div><div class="price">230₺</div></div>
+    </section>
+
+    <!-- Diğer Soğuk İçecekler -->
+    <section class="section">
+      <h2>🥤 Other Cold Drinks</h2>
+      <div class="item"><div><div class="name">Rooibos Tea</div></div><div class="price">200₺</div></div>
+      <div class="item"><div><div class="name">Rooibos Vanilla Tea</div></div><div class="price">230₺</div></div>
+      <div class="item"><div><div class="name">Matcha Latte</div></div><div class="price">210₺</div></div>
+      <div class="item"><div><div class="name">Coconut Matcha Latte</div></div><div class="price">220₺</div></div>
+      <div class="item"><div><div class="name">Strawberry Matcha Latte</div></div><div class="price">240₺</div></div>
+      <div class="item"><div><div class="name">Vanilla Matcha Latte</div></div><div class="price">230₺</div></div>
+      <div class="item"><div><div class="name">Cool Lime</div></div><div class="price">230₺</div></div>
+      <div class="item"><div><div class="name">Lemonade</div></div><div class="price">190₺</div></div>
+    </section>
+
+    <!-- Paket Kahve / Ekstralar -->
+    <section class="section">
+      <h2>🫘 Paket Kahve & Ekstralar</h2>
+      <div class="item"><div><div class="name">Espresso / Filter Blend (package)</div><div class="desc">100g / 200g / 500g / 1000g</div></div><div class="sizes"><span>155₺</span><span>370₺</span><span>840₺</span><span>1550₺</span></div></div>
+      <div class="item"><div><div class="name">Turkish Coffee (package)</div><div class="desc">100g / 200g / 500g</div></div><div class="sizes"><span>180₺</span><span>315₺</span><span>630₺</span></div></div>
+      <div class="item"><div><div class="name">Extra Syrups</div><div class="desc">Vanilla / Caramel</div></div><div class="sizes"><span>55₺</span></div></div>
+      <div class="item"><div><div class="name">Plant Based Milk</div><div class="desc">Bitkisel süt</div></div><div class="price">40₺</div></div>
+    </section>
+
+    <div class="foot">Fiyatlar TL cinsindedir.</div>
+  </div>
+</body>
+</html>
